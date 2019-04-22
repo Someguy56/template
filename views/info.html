@@ -26,12 +26,19 @@
     </repeat>
 </ul>
 
-<h2>My Bookmarks</h2>
+<h2>My Bookmarks w/ Links </h2>
 <ul>
-    <repeat group="{{@bookmarks2}}" value="{{@bookmark => @link}}">
+    <repeat group="{{@bookmarks2}}" key="{{@bookmark}}" value="{{@link}}">
         <li><a href="{{@link}}">{{@bookmark}}</a></li>
     </repeat>
 </ul>
+
+<h2>Dessert Option</h2>
+<repeat group="{{@desserts}}" key="{{@name}}" value="{{@longName}}">
+    <label><input type="checkbox" value="{{@name}}">{{@longName}}</label>
+    <br>
+</repeat>
+
 
 </body>
 </html>

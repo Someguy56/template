@@ -38,6 +38,9 @@
         $bookmarks2 = ['reddit'=>'http://reddit.com', 'google'=>'http://google.com', 'youtube'=>'http://youtube.com'];
         $f3->set('bookmarks2', $bookmarks2);
 
+        $desserts = ['chocolate'=>'Chocolate Mousse', 'vanilla'=>'Vanilla Custard', 'strawberry'=>'Strawberry Shortcake'];
+        $f3->set('desserts', $desserts);
+
         $view = new Template();
         echo $view->render("views/info.html");
     });
