@@ -26,6 +26,17 @@
     {
         //Set a F3 variable
         $f3->set('title', 'Practicing with Templates');
+        $f3->set('temp', 67);
+        $f3->set('radius', 10);
+
+        $fruits = ['apple', 'orange', 'banana'];
+        $f3->set('fruits', $fruits);
+
+        $bookmarks = ['reddit', 'google', 'youtube'];
+        $f3->set('bookmarks', $bookmarks);
+
+        $bookmarks2 = ['reddit'=>'http://reddit.com', 'google'=>'http://google.com', 'youtube'=>'http://youtube.com'];
+        $f3->set('bookmarks2', $bookmarks2);
 
         $view = new Template();
         echo $view->render("views/info.html");
